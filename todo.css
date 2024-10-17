@@ -1,0 +1,57 @@
+@font-face { font-family: Inter; src: url('inter.ttf'); } 
+body {
+    font-family: "Inter", "Segoe UI", "Arial";
+    background-color: #191919;
+    padding: 2vw;
+    color: #d4d4d4;
+}
+
+.container {
+    display: block;
+    padding: 20px;
+    border-bottom-style: solid;
+    border-color: #3a3a3a;
+    border-width: 1px;
+}
+
+.container:hover {
+    background-color: #212121;
+}
+
+#last {
+    border-bottom-style: none;
+    color: #5a5a5a;
+}
+
+.trash {
+    float: right;
+}
+
+input[type="text"] {
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+    border: none;
+    background: transparent;
+    width: 80%;
+    padding-left: 1vw;
+}
+
+/* Remove outline if currently editing */
+input[type="text"]:focus {
+    outline: none;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    accent-color: #2383e2;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+
+i {
+    color: #4b4b4b;
+}
