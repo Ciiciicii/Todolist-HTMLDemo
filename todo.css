@@ -8,7 +8,7 @@ body {
 
 .container {
     display: block;
-    padding: 20px;
+    padding: 12px;
     border-bottom-style: solid;
     border-color: #3a3a3a;
     border-width: 1px;
@@ -25,9 +25,11 @@ body {
 
 .trash {
     float: right;
+    background: transparent;
+    border: none;
 }
 
-input[type="text"] {
+.task {
     font-family: inherit;
     color: inherit;
     font-size: inherit;
@@ -38,20 +40,15 @@ input[type="text"] {
 }
 
 /* Remove outline if currently editing */
-input[type="text"]:focus {
+.task:focus {
     outline: none;
 }
 
-input[type="checkbox"] {
+.checkbox {
     transform: scale(1.5);
     accent-color: #2383e2;
 }
 
-button {
-    background: transparent;
-    border: none;
-}
-
-i {
+.fa-trash-o {
     color: #4b4b4b;
 }

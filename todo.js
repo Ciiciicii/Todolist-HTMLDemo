@@ -5,9 +5,11 @@ function addTask() {
     taskEntry.classList.add("container")
 
     const checkBox = document.createElement("input");
-    checkBox.setAttribute("type", "checkbox");
+    checkBox.classList.add("checkbox")
+    checkBox.type = "checkbox";
 
     const textinput = document.createElement("input");
+    textinput.classList.add("task")
     textinput.type = "text";
     textinput.placeholder = "To-do";
 
@@ -46,14 +48,10 @@ parentContainer.addEventListener("click", function(event) {
         if (event.target.type === "checkbox") {
             // Get the next element sibling, which is text input
             const textinput = event.target.nextElementSibling;
-            if (event.target.checked) {
-                textinput.style.color = "#4b4b4b";
-                textinput.style.textDecoration = "line-through";
-            }
-            else {
-                textinput.style.color = "#d4d4d4";
-                textinput.style.textDecoration = "none";
-            }
+            const isChecked = event.target.checked
+
+            textinput.style.color = isChecked ? "#4b4b4b" : "#d4d4d4";
+            textinput.style.textDecoration = isChecked ? "line-through" : "none";
         }
     }
 });
